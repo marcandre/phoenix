@@ -8,7 +8,11 @@
 # which you should run after static files are built and
 # before starting your production server.
 config :<%= @web_app_name %>, <%= @endpoint_module %>,
-  url: [host: "example.com", port: 80],
+  url: [
+    host: "example.com",
+    port: 80,
+    compress: true
+  ],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # ## SSL Support
